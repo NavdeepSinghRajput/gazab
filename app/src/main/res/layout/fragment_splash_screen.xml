@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:src="@drawable/gazab_logo_caption" />
+
+    <com.gazabapp.customeview.Button_custom
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logoFooter"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_login"
+        android:text="@string/login"
+        android:textColor="?attr/splash_login_button_text" />
+
+    <TextView
+        android:layout_marginBottom="@dimen/padding_10"
+        android:layout_centerInParent="true"
+        android:id="@+id/logoFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:drawableRight="@drawable/ic_baseline_favorite_24"
+        android:text="Made in India, With "
+        android:textColor="#0bb5f0"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_footer" />
+
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/feed_fragment_background"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:clipToPadding="false"
+        android:id="@+id/swipeContainer"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-60dp"
+        android:layout_width="match_parent"
+        android:paddingTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvPost"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_gravity="center"
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="?attr/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:background="@drawable/app_bar"
+                android:gravity="center_vertical"
+                android:id="@+id/liTopbar"
+                android:layout_height="140dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="?back_community_details"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/ivBack"
+                            android:layout_height="28dp"
+                            android:layout_width="28dp"
+                            android:src="@drawable/back_screen" />
+
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_width="0dp" />
+
+                        <com.gazabapp.customeview.Checkbox_custom
+                            android:background="@drawable/follow_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:id="@+id/cbFollow"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="100dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/follow" />
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/ivShare"
+                            android:layout_height="28dp"
+                            android:layout_width="28dp"
+                            android:src="@drawable/share_community" />
+                    </LinearLayout>
+
+                    <com.gazabapp.customeview.TextView_custom
+                        android:gravity="center"
+                        android:id="@+id/tvName"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:text="@string/name"
+                        android:textColor="?attr/tool_bar_text"
+                        android:textSize="28dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.gazabapp.customeview.TextView_custom
+                            android:id="@+id/tvPost"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:text="@string/post"
+                            android:textColor="?attr/tool_bar_text"
+                            android:textSize="16dp" />
+
+                        <View
+                            android:background="@drawable/circle_white"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="12dp" />
+
+                        <com.gazabapp.customeview.TextView_custom
+                            android:id="@+id/tvFollowers"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:text="@string/followers"
+                            android:textColor="?attr/tool_bar_text"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="100dp">
+
+                            <com.gazabapp.customeview.TextView_custom
+                                android:gravity="center"
+                                android:id="@+id/tvHot"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:text="@string/hot"
+                                android:textColor="?attr/tool_bar_text"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <com.gazabapp.customeview.TextView_custom
+                                android:background="?attr/top_bar_select"
+                                android:ems="5"
+                                android:id="@+id/tvHotBottom"
+                                android:layout_gravity="bottom"
+                                android:layout_height="5dp"
+                                android:layout_width="match_parent" />
+                        </FrameLayout>
+
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="20dp" />
+
+                        <FrameLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="100dp">
+
+                            <com.gazabapp.customeview.TextView_custom
+                                android:gravity="center"
+                                android:id="@+id/tvFresh"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:text="@string/fresh"
+                                android:textColor="?attr/tool_bar_text"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <com.gazabapp.customeview.TextView_custom
+                                android:background="?attr/top_bar_select"
+                                android:ems="5"
+                                android:id="@+id/tvFreshBottom"
+                                android:layout_gravity="bottom"
+                                android:layout_height="5dp"
+                                android:layout_width="match_parent" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

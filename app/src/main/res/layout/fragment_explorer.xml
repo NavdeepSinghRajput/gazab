@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="?attr/feed_fragment_background">
+
+
+
+
+
+<GridView
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:nestedScrollingEnabled="true"
+    android:scrollbars="none"
+    android:background="?attr/back_explorer"
+    android:numColumns="3"
+    android:id="@+id/gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:padding="10dp"/>
+    <com.gazabapp.customeview.TextView_custom
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="?attr/couldnt_find_your_group"
+        android:text="@string/couldnt_find_your_group"
+        android:layout_gravity="center"
+        android:id="@+id/tvNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<ProgressBar
+    android:visibility="gone"
+    android:layout_gravity="bottom"
+    android:id="@+id/progress_bar"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"/>
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/app_bar">
+            <FrameLayout
+
+                android:background="@drawable/back_explorer_topbar_editbox"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.gazabapp.customeview.EditText_custom
+                    android:paddingLeft="20dp"
+                    android:paddingRight="40dp"
+                    android:textSize="18dp"
+                    android:textColor="?attr/text_explorer_topbar_editbox"
+                    android:textColorHint="?attr/text_explorer_topbar_editbox"
+                    android:id="@+id/etSearch"
+                    android:imeOptions="actionSearch"
+                    android:gravity="center_vertical"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/gzb_search"/>
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:layout_gravity="right"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/search"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

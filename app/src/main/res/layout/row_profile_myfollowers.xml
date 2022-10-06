@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent"
+    android:padding="5dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="?attr/drw_highlight"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivPhoto"
+            android:adjustViewBounds="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+        <ImageView
+            android:tint="?attr/profile_base_back"
+            android:adjustViewBounds="true"
+            android:src="@drawable/blank_circle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+    </FrameLayout>
+
+
+    <com.gazabapp.customeview.TextView_custom
+        android:textColor="?attr/profile_followers_follow"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:text="@string/name"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:id="@+id/tvName"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <com.gazabapp.customeview.Button_custom
+        android:textAllCaps="false"
+        android:text="@string/following"
+        android:background="@drawable/back_profile_myfollowers_follow_button"
+        android:textColor="?attr/profile_followers_follow"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:id="@+id/btFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

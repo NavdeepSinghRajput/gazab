@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:background="@drawable/back_choose_comm_to_post_icon"
+        android:padding="0dp"
+        android:id="@+id/ivCommIcon"
+        android:adjustViewBounds="true"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+
+    <com.gazabapp.customeview.TextView_custom
+        android:textSize="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/community_name"
+        android:id="@+id/tvCommunityName"
+        android:textColor="?attr/choose_comm_text1"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <CheckBox
+        android:button="@drawable/selector_community_choose_to_post"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

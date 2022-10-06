@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/post_detail_back">
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+            <ImageView
+                android:background="?attr/drw_highlight"
+                android:scaleType="centerCrop"
+                android:id="@+id/ivProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:tint="?attr/post_detail_back"
+                android:src="@drawable/feed_detail_box_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+        <com.gazabapp.customeview.TextView_custom
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="?attr/comment_username"
+            android:text="@string/username"
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/single_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.gazabapp.customeview.TextView_custom
+            android:textSize="12dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="?attr/ago_post_comment"
+            android:text="@string/ago"
+            android:id="@+id/tvAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <com.gazabapp.customeview.ExpandableTextView_custom
+        android:layout_marginLeft="50dp"
+        android:textColor="?attr/comment_post_main"
+        android:id="@+id/tvComment"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:text="@string/comments"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.gazabapp.customeview.TextView_custom
+        android:layout_marginTop="2dp"
+        android:textSize="12dp"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:textColor="?attr/comment_reply"
+        android:text="@string/reply"
+        android:id="@+id/tvReply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

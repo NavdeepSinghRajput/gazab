@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="?attr/post_detail_back"
+    android:gravity="center_vertical"
+    android:padding="5dp">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="?attr/drw_highlight"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivPhoto"
+            android:adjustViewBounds="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <ImageView
+            android:adjustViewBounds="true"
+            android:tint="?attr/post_detail_back"
+            android:src="@drawable/blank_circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <ImageView
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/comments"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.gazabapp.customeview.TextView_custom
+                android:textColor="?attr/profile_comment_title"
+                android:id="@+id/tvComment"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <com.gazabapp.customeview.TextView_custom
+                android:layout_marginLeft="5dp"
+                android:textColor="?attr/profile_comment_community"
+                android:id="@+id/tvCommunity"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <com.gazabapp.customeview.TextView_custom
+            android:textColor="?attr/profile_ago"
+            android:id="@+id/tvAgo"
+            android:text="@string/ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

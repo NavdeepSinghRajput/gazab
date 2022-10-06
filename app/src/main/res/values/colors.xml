@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="create_text_post_choose_color_1">#00000000</color>
+    <color name="create_text_post_choose_color_2">#ff3845</color>
+    <color name="create_text_post_choose_color_3">#4072ff</color>
+    <color name="create_text_post_choose_color_4">#FFFFFF</color>
+    <color name="create_text_post_choose_color_5">#ffd71f</color>
+    <color name="create_text_post_choose_color_6">#40ff00</color>
+    <color name="background">#dddddd</color>
+    <color name="red">#FF0000</color>
+    <color name="caldroid_333">#333</color>
+    <color name="caldroid_555">#555</color>
+    <color name="caldroid_black">#000000</color>
+    <color name="caldroid_darker_gray">#aaa</color>
+    <color name="caldroid_gray">#CCC</color>
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <color name="caldroid_holo_blue_light">#ff33b5e5</color>
+    <color name="caldroid_light_red">#ff7f7f</color>
+    <color name="caldroid_lighter_gray">#ddd</color>
+    <color name="caldroid_middle_gray">#888</color>
+    <color name="caldroid_sky_blue">#FFA3E8F7</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <color name="caldroid_white">#FFFFFF</color>
+    <color name="white">#ffffff</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="mdtp_transparent_black">#7f000000</color>
+</resources>

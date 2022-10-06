@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/new_post_background"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/back_screen" />
+
+        <com.gazabapp.customeview.TextView_custom
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/new_link_post"
+            android:textColor="?attr/new_post_title"
+            android:textSize="18dp" />
+
+        <com.gazabapp.customeview.TextView_custom
+            android:id="@+id/tvPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/post"
+            android:textColor="?attr/new_post_text2"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liChooseCommunity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/back_new_post_field"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <com.gazabapp.customeview.TextView_custom
+            android:id="@+id/tvCommunity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:text="@string/choose_a_community"
+            android:textColor="?attr/new_post_field"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/down_arrow" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/back_new_post_field"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <com.gazabapp.customeview.EditText_custom
+            android:id="@+id/etPostTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="?attr/new_post_field"
+            android:hint="@string/post_title"
+            android:maxLines="2"
+            android:minHeight="0dp"
+            android:paddingBottom="20dp"
+            android:textColor="?attr/new_post_field"
+            android:textColorHint="?attr/new_post_field"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/back_new_post_field"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <com.gazabapp.customeview.EditText_custom
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="@string/description_optional"
+            android:maxLines="6"
+            android:minHeight="0dp"
+            android:minLines="4"
+            android:singleLine="false"
+            android:textColor="?attr/new_post_field2"
+            android:textColorHint="?attr/new_post_field2"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_new_post_link_field"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <com.gazabapp.customeview.TextView_custom
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:text="@string/paste_your_link_here"
+            android:textColor="?attr/new_post_field"
+            android:textSize="16dp" />
+
+        <com.gazabapp.customeview.EditText_custom
+            android:id="@+id/etLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_new_post_link"
+            android:hint="@string/http__"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="?attr/new_post_field"
+            android:textColorHint="?attr/new_post_field"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/feed_box_background"
+    android:gravity="center_horizontal"
+    android:id="@+id/liMain"
+    android:clickable="true">
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/ivProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:tint="?attr/feed_box_background"
+                android:src="@drawable/feed_box_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.gazabapp.customeview.TextView_custom
+                android:textColor="?attr/feed_box_text"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Title"
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.gazabapp.customeview.TextView_custom
+                    android:textColor="?attr/feed_box_writer_text"
+                    android:textSize="12dp"
+                    android:text="Jayant Pathak"
+                    android:id="@+id/tvWriter"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/ivDot"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/single_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <com.gazabapp.customeview.TextView_custom
+                    android:textColor="?attr/feed_box_follow"
+                    android:textSize="12dp"
+                    android:text="@string/follow"
+                    android:clickable="true"
+                    android:id="@+id/tvFollow"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivOption"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/three_dots_black" />
+    </LinearLayout>
+    <com.gazabapp.customeview.TextView_custom
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:id="@+id/tvTemp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.gazabapp.customeview.TextView_custom
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="?attr/feed_box_follow"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:id="@+id/tvDetail"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/liContainer"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:id="@+id/ivPoster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/feed_box_background_bottom"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/up_vote"
+                android:ems="3"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="5dp"
+                android:textColor="?attr/feed_box_reaction_count_text"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/down_vote"
+                android:ems="3"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="5dp"
+                android:textColor="?attr/feed_box_reaction_count_text"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/comments" />
+
+            <com.gazabapp.customeview.TextView_custom
+                android:id="@+id/tvCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="55"
+                android:textColor="?attr/feed_box_comment_count_text"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/share" />
+
+            <com.gazabapp.customeview.TextView_custom
+                android:id="@+id/tvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/share"
+                android:textColor="?attr/feed_box_share_text"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

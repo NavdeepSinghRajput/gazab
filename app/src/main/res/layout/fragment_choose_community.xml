@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/background_gender">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.gazabapp.customeview.Button_custom
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="?attr/back"
+                android:id="@+id/btBack"
+                android:textSize="18dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <com.gazabapp.customeview.Button_custom
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="?attr/next"
+                android:id="@+id/btNext"
+                android:textSize="18dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.gazabapp.customeview.TextView_custom
+                android:textSize="20dp"
+                android:textColor="?attr/community_choose_title_text"
+                android:text="@string/choose_your_interests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"/>
+
+            <GridView
+                android:scrollbars="none"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:numColumns="3"
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

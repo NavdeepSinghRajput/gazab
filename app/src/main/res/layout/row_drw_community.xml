@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:background="@drawable/back_drw_community_icon"
+        android:id="@+id/ivIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+    <com.gazabapp.customeview.TextView_custom
+        android:textSize="16dp"
+        android:layout_marginLeft="10dp"
+        android:minHeight="0dp"
+        android:textColor="?attr/drw_text_1"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitle"/>
+
+</LinearLayout>

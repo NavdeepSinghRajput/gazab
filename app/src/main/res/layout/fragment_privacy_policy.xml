@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="?attr/notification_back">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/app_bar">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical|left"
+                android:id="@+id/ivBack"
+                android:src="@drawable/back_screen"
+                android:adjustViewBounds="true"
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+            <com.gazabapp.customeview.TextView_custom
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="?attr/privacy_policy_title"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

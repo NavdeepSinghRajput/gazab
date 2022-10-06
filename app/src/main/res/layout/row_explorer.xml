@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/feed_fragment_background"
+    app:cardCornerRadius="8dp">
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <com.gazabapp.customeview.TextView_custom
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/choose_community_bottom_back"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/name"
+                android:textColor="?attr/community_choose_name_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:orientation="vertical">
+
+            <com.gazabapp.customeview.Checkbox_custom
+                android:id="@+id/cbFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/follow_selector"
+                android:button="@null"
+                android:ems="5"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/green_dot" />
+
+            <com.gazabapp.customeview.TextView_custom
+                android:id="@+id/tvUserCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/text"
+                android:textColor="?attr/text_explorer_community_id"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="?attr/feed_fragment_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
+            android:id="@+id/ivCover"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/add_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <com.gazabapp.customeview.TextView_custom
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/name"
+            android:textColor="?attr/feed_box_text"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
+            android:id="@+id/Follow"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/posts"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:id="@+id/communityFollowll"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/follow_selector"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/communityFollowUnSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:text="@string/join"
+                    android:textColor="?attr/white" />
+
+                <ImageView
+                    android:id="@+id/communityFollowSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>

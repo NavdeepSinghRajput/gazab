@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/post_detail_back"
+    android:gravity="center_horizontal"
+    android:clickable="true">
+    <LinearLayout
+        android:padding="10dp"
+        android:background="?attr/post_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ivBack"
+            android:src="@drawable/back_screen"
+            android:adjustViewBounds="true"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/ivShare"
+            android:src="@drawable/share_profile"
+            android:adjustViewBounds="true"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:background="?attr/feed_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:background="?attr/drw_highlight"
+                android:id="@+id/ivCurrentProfile"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:tint="?attr/feed_detail_bottom"
+                android:src="@drawable/feed_box_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/edit_post_details_comments"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.gazabapp.customeview.EditText_custom
+                android:singleLine="true"
+                android:textColor="?attr/new_comment"
+                android:textColorHint="?attr/new_comment"
+                android:hint="@string/comment_here"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:id="@+id/etComment"
+                android:cursorVisible="true"
+                android:textCursorDrawable="?attr/colorPrimary"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:maxLines="2"
+                android:imeActionLabel="@string/reply"
+                android:imeOptions="actionSend"/>
+
+            <com.gazabapp.customeview.TextView_custom
+                android:gravity="center_vertical"
+                android:id="@+id/tvPost"
+                android:textSize="16dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textColor="?attr/reply"
+                android:text="@string/reply"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+

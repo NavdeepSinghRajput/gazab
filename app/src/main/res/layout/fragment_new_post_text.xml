@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/new_post_background"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:src="@drawable/back_screen"
+            android:adjustViewBounds="true"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+
+        <com.gazabapp.customeview.TextView_custom
+            android:textSize="18dp"
+            android:textColor="?attr/new_post_title"
+            android:gravity="center"
+            android:text="@string/new_text_post"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <com.gazabapp.customeview.TextView_custom
+            android:id="@+id/tvPost"
+            android:textColor="?attr/new_post_text2"
+            android:textSize="16dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/liChooseCommunity"
+        android:padding="15dp"
+        android:background="@drawable/back_new_post_field"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gazabapp.customeview.TextView_custom
+            android:id="@+id/tvCommunity"
+            android:textSize="16dp"
+            android:minHeight="0dp"
+            android:text="@string/choose_a_community"
+            android:textColor="?attr/new_post_field"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/down_arrow"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/liTitle"
+        android:padding="15dp"
+        android:background="@drawable/back_new_post_field"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gazabapp.customeview.AutoResizeEditText
+            android:id="@+id/etPostTitle"
+            android:minHeight="0dp"
+            android:hint="@string/post_title"
+            android:textColor="?attr/new_post_field"
+            android:textColorHint="?attr/new_post_field"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:isScrollContainer="false"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLength="240"
+            android:textSize="40sp"/>
+
+
+    </LinearLayout>
+
+
+
+    <com.gazabapp.customeview.TextView_custom
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:minHeight="0dp"
+        android:text="@string/choose_background_color"
+        android:textColor="?attr/new_post_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/ivTextColor1"
+            android:src="@drawable/text_back_1"
+            android:adjustViewBounds="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/ivTextColor2"
+            android:src="@drawable/text_back_2"
+            android:adjustViewBounds="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/ivTextColor3"
+            android:src="@drawable/text_back_3"
+            android:adjustViewBounds="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/ivTextColor4"
+            android:src="@drawable/text_back_4"
+            android:adjustViewBounds="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/ivTextColor5"
+            android:src="@drawable/text_back_5"
+            android:adjustViewBounds="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/ivTextColor6"
+            android:src="@drawable/text_back_6"
+            android:adjustViewBounds="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/new_post_choose_comm_background">
+    <LinearLayout
+        android:background="?attr/new_post_choose_comm_title_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:src="@drawable/back_screen"
+            android:adjustViewBounds="true"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+
+        <com.gazabapp.customeview.TextView_custom
+            android:textSize="18dp"
+            android:textColor="?attr/new_post_title"
+            android:gravity="center"
+            android:text="@string/choose_a_community"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <com.gazabapp.customeview.TextView_custom
+            android:id="@+id/tvNext"
+            android:textSize="16dp"
+            android:textColor="?attr/new_post_field2"
+            android:gravity="center"
+            android:text="@string/next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listview"
+        android:dividerHeight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

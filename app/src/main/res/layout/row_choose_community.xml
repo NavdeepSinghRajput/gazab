@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:background="?attr/background_gender"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:visibility="gone"
+        android:foregroundGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <com.gazabapp.customeview.TextView_custom
+                android:text="@string/name"
+                android:textColor="?attr/community_choose_name_text"
+                android:background="@drawable/choose_community_bottom_back"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_height="wrap_content">
+
+            <com.gazabapp.customeview.Checkbox_custom
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/follow_selector"
+                android:button="@null"
+                android:id="@+id/cbFollow"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="?attr/background_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCover"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/add_image"
+            android:layout_marginTop="20dp" />
+            <ImageView
+                android:id="@+id/follow"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/community_select_tick"/>
+        </RelativeLayout>
+        <com.gazabapp.customeview.TextView_custom
+            android:layout_marginVertical="10dp"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/name"
+            android:textColor="#000000"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

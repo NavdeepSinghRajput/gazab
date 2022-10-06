@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/background_gender">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.gazabapp.customeview.Button_custom
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="?attr/back"
+                android:id="@+id/btBack"
+                android:textSize="18dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <com.gazabapp.customeview.Button_custom
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="?attr/next"
+                android:id="@+id/btNext"
+                android:textSize="18dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.gazabapp.customeview.TextView_custom
+                android:textSize="20dp"
+                android:textColor="?attr/gender_title_text"
+                android:text="@string/gender_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:background="@drawable/selector_gender_female"
+                        android:drawableStart="@drawable/gender_female"
+                        android:button="@null"
+                        android:id="@+id/rbtFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RadioButton
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_gender_male"
+                        android:drawableStart="@drawable/gender_male"
+                        android:button="@null"
+                        android:id="@+id/rbtMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RadioButton
+                        android:background="@drawable/selector_gender_other"
+                        android:drawableStart="@drawable/gender_other"
+                        android:button="@null"
+                        android:id="@+id/rbtOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.gazabapp.customeview.TextView_custom
+                        android:id="@+id/tvFemale"
+                        android:gravity="center"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:textSize="16dp"
+                        android:text="@string/female"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/gender_text_unselect"/>
+                    <com.gazabapp.customeview.TextView_custom
+                        android:id="@+id/tvMale"
+                        android:gravity="center"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:textSize="16dp"
+                        android:text="@string/male"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/gender_text_unselect"/>
+                    <com.gazabapp.customeview.TextView_custom
+                        android:id="@+id/tvOther"
+                        android:gravity="center"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:textSize="16dp"
+                        android:text="@string/other"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/gender_text_unselect"/>
+                </LinearLayout>
+                <com.gazabapp.customeview.TextView_custom
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tvStatus"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16dp"
+                    android:textColor="?attr/gender_status_message"
+                    android:text="@string/select_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:src="@drawable/selector_registration_done"
+                android:id="@+id/ivNext"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>
